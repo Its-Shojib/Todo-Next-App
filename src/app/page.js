@@ -1,3 +1,4 @@
+import Todo from '@/Components/Todo';
 import React from 'react';
 
 const HomePage = () => {
@@ -14,10 +15,40 @@ const HomePage = () => {
           name="description"
           placeholder='Enter Description'
           className='px-3 py-2 border-2 w-full' />
-        <button 
-        type="submit"
-        className='px-11 py-2 bg-orange-800 text-white rounded-md'>Submit</button>
+        <button
+          type="submit"
+          className='px-11 py-2 bg-orange-800 text-white rounded-md'>Submit</button>
       </form>
+
+
+
+      <div className="relative overflow-x-auto mx-auto mt-24 w-[60%]">
+        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 text-center">
+            <tr>
+              <th scope="col" className="px-6 py-3">
+                Id
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Title
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Description
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Status
+              </th>
+              <th scope="col" className="px-6 py-3">
+                Action
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <Todo />
+          </tbody>
+        </table>
+      </div>
+
     </div>
   );
 };
